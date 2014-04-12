@@ -1,0 +1,3 @@
+Exec {
+	path => ["/user/bin"]
+}
