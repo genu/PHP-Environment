@@ -28,6 +28,7 @@ The `project` folder is the development working directory of the php project.
 6. (Optional) To preview a built project, move the build files into the `www` folder
 
 **NOTE**
+
 The project may optionally include a task to automatically build the project into the `www` folder and provision the specific project in the environment.
 
 ## Contributing
