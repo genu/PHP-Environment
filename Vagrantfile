@@ -1,3 +1,4 @@
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -39,6 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "www", "/var/www"
+  config.vm.synced_folder "project", "/var/project"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -77,7 +79,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.manifests_path = "puppet/manifests"
     puppet.manifest_file  = "init.pp"
     puppet.module_path    = "puppet/modules"
-    puppet.options        = "--verbose --debug"
+    puppet.options        = "-v -d -l /tmp/puppet.log"
   end
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
