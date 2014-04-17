@@ -1,6 +1,6 @@
 # Environment
 
-Sets up a development environment with vagrant
+Sets up a PHP Stack development environment using vagrant for quick environment setup and configuration. 
 
 ## What's inside
 - Apache 
@@ -29,3 +29,8 @@ The `project` folder is the development working directory of the php project.
 
 **NOTE***
 The project may optionally include a task to automatically build the project into the `www` folder and provision the specific project in the environment.
+
+## Contributing
+The goal of the project is to not cater to any specific Project, but rather establish an effective workflow for deploying a development environmeny.
+
+If you can improve this workflow, submit a pull request. 
