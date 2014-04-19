@@ -21,6 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   config.vm.network :forwarded_port, guest: 80, host: 8181
+  config.vm.network :forwarded_port, guest: 3306, host: 3306
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -79,7 +80,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.manifests_path = "puppet/manifests"
     puppet.manifest_file  = "init.pp"
     puppet.module_path    = "puppet/modules"
-    puppet.options        = "-v -d -l /tmp/puppet.log"
+    puppet.options        = "-v -d -l /var/www/puppet.log"
   end
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
