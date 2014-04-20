@@ -23,5 +23,6 @@ php::pear::module { 'VersionControl_Git-0.4.4':
 php::pecl::module { 'xdebug': }
 
 class { "mysql":
-	root_password => 'root'
+	root_password => 'root',
+	monitor_target => '0.0.0.0'
 }
